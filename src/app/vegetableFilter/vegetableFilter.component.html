@@ -1,12 +1,14 @@
 <div class="layout-column align-items-center mt-50">
   <section class="layout-row align-items-center justify-content-center">
     <input type="text" class="large" placeholder="Enter veg eg carrot"
+
+    [(ngModel)]="searchedVeg" (ngModelChange) ="onUpdate($event)"
           data-test-id="app-input" />
   </section>
 ​
-  <ul class="mt-50 slide-up-fade-in styled" data-test-id="filtered-vegetables" *ngif="valid" >
+  <ul class="mt-50 slide-up-fade-in styled" data-test-id="filtered-vegetables" *ngIf="valid" >
     <li class="py-10" *ngFor="let vegetable of vegetables; let i=index"[innerHtml]="vegetable"></li>
   </ul>
 ​
-  <div class="mt-50 slide-up-fade-in" data-test-id="no-result" *ngif="!valid">No Results Found</div>
+  <div class="mt-50 slide-up-fade-in" data-test-id="no-result" *ngIf="!valid">No Results Found</div>
 </div>

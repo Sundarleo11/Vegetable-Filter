@@ -18,7 +18,8 @@ export class VegetableFilter implements OnInit {
     this.searchedVeg=this.searchedVeg.trim();
     this.vegetables=JSON.parse(
       JSON.stringify(
-        this.newVegetables.filter((veg)=> veg.toLowerCase().startsWith(this.searchedVeg.toLowerCase().trim())
+        this.newVegetables.filter((veg)=> 
+        veg.toLowerCase().startsWith(this.searchedVeg.toLowerCase().trim())
         )
       )
     );

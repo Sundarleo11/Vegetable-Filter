@@ -115,6 +115,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "vegetableFilter"
+    }
+  },
+  "defaultProject": "vegetableFilter",
+  "cli": {
+    "analytics": "d9560927-35bd-4527-ba08-2aef26013e35"
+  }
 }
